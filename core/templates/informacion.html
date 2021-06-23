@@ -1,0 +1,47 @@
+{% extends 'layaout.html' %}
+{% block content %}
+<div class="container-fluid text-center">
+<h1>Información de la cancion: {{cancion.nombre}}</h1>
+</div>
+<table class="table">
+    <thead>
+      
+    </thead>
+    <tbody>
+        
+      <tr class="table-active">
+      </tr>
+      <tr>
+          <tr>
+        <th scope="row">Id: </th>
+        <td colspan="2" class="table-active">{{cancion.id}}</td>        
+        </tr>
+        <tr>
+         <th scope="row">Nombre: </th>
+        <td colspan="2" class="table-active">{{cancion.nombre}}</td>                    
+        </tr>
+        <tr>
+            <th scope="row">Autor: </th>
+           <td colspan="2" class="table-active">{{cancion.autor}}</td>                    
+        </tr>
+        <tr>
+            <th scope="row">Albúm: </th>
+            <td colspan="2" class="table-active">{{cancion.album}}</td>                    
+        </tr>
+        <tr>
+            <th scope="row">Duración: </th>
+            <td colspan="2" class="table-active">{{cancion.duracion}}</td>
+        </tr>
+        <tr>
+            <th scope="row">Fecha: </th>
+            <td colspan="2" class="table-active">{{cancion.fechaLanzamiento}}</td>
+        </tr>
+        
+
+      </tr>
+    </tbody>
+  </table>
+  <div class="container-fluid text-center">
+    <a class="btn btn-outline-dark btn-sm" href="{% url 'listar'  %}">Volver</a>
+</div>
+{% endblock %}

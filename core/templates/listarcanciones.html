@@ -1,0 +1,28 @@
+{% extends 'layaout.html' %}
+{% block content %}
+<div class="container-fluid text-center">
+<h1>Lista de canciones</h1>
+</div>
+
+<table class="table">
+    <thead>
+      
+    </thead>
+    <tbody>
+    {% for cancion in canciones %}
+      <tr class="table-active">
+      </tr>
+      <tr>
+        <th scope="row">Id: {{cancion.id}}</th>
+        <td colspan="2" class="table-active">{{cancion.nombre}}, {{cancion.autor}}</td>        
+        <td>
+            <a class="btn btn-outline-dark btn-sm" href="{% url 'informacion'  cancion.id %}">Información</a>
+            <a class="btn btn-outline-dark btn-sm" href="{% url 'editar'  cancion.id %}">Editar</a>
+            <a class="btn btn-outline-dark btn-sm" href="{% url 'eliminar'  cancion.id %}">Eliminar</a>
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+{% endblock %}
