@@ -5,12 +5,11 @@
      <form method="post">
          {% csrf_token %}
       {{form}}
-         <button type="submit" class="btn btn-outline-dark">Editar canción</button>
+         <button type="submit" class="btn btn-outline-dark btn-sm">Editar canción</button>
+         <a class="btn btn-outline-dark btn-sm" href="{% url 'listar'  %}">Volver</a>
        </form>
      </div>
-     <div class="container-fluid text-center">
-          <a class="btn btn-outline-dark btn-sm" href="{% url 'listar'  %}">Volver</a>
-      </div>
+     
  
 
 {% endblock %}

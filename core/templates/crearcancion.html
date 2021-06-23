@@ -1,11 +1,13 @@
 {% extends 'layaout.html' %}
 {% block content %}
 <div class="container-fluid text-center">
+    
     <h1>Agregar canción</h1>
     <form method="post">
         {% csrf_token %}
      {{form}}
-        <button type="submit" class="btn btn-outline-dark">Agregar canción</button>
+        <button type="submit" class="btn btn-outline-dark btn-sm">Agregar canción</button>
+        <a class="btn btn-outline-dark btn-sm" href="{% url 'listar'  %}">Volver</a>
       </form>
     </div>
 
