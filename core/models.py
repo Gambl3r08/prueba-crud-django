@@ -8,3 +8,8 @@ class cancion(models.Model):
     fechaLanzamiento = models.DateField()
 
 
+    def __str__(self) -> str:
+        info = self.nombre + ", "+self.autor
+        return info
+
+
