@@ -1,8 +1,8 @@
-from django.http import response
 from django.shortcuts import redirect, render
-
 from core.models import cancion
 from .forms import *
+
+
 def home(request):    
     return render(request, 'index.html', {})
 
